@@ -7,9 +7,10 @@ from random import randint,randrange
 path = '/Users/inika/Desktop/notebooks/Web Scraping/Selenium/chromedriver' # path to webdriver
 driver = webdriver.Chrome(path)
 
-# set login credentials
+# set login credentials,server and channel names here
 username = "sample_username_here"
 password = "sample_password_here"
+server = "servername"
 
 driver.get('https://discordapp.com')
 time.sleep(1)
@@ -29,7 +30,7 @@ time.sleep(10)
 anchors = driver.find_elements_by_tag_name("a")
 for a in anchors:
     try:
-        if a.get_attribute("aria-label")=='sandcastle':
+        if a.get_attribute("aria-label")==server:
             a.click()
     except StaleElementReferenceException:
         break
