@@ -66,4 +66,5 @@ while True:
         time.sleep(w)
                             
     except StaleElementReferenceException:
-        continue
+#         continue
+        t = driver.find_element_by_xpath('//div[@aria-label = "Message #spam"]')
