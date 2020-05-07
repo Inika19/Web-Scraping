@@ -22,8 +22,8 @@ def login():
 	path = '/Users/inika/Selenium Webdrivers/chromedriver'
 	driver = webdriver.Chrome(path)
 
-	username = "punkprincess9155@gmail.com"
-	password = "janelane19"
+	username = " "
+	password = " "
 
 	driver.get('https://discord.com')
 	wait = WebDriverWait(driver, 10)
